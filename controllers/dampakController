@@ -10,7 +10,8 @@ const Dampak = require('../models/dampakModel');
  */
 exports.createDampak = asyncHandler(async (req, res) => {
     const {title, content} = req.body
-    const dampak = await Dampak.create({title, content});
+    const image = req.file.path;
+    const dampak = await Dampak.create({title, content, image});
     res.status(201).json({
         success: true,
         data: dampak,
@@ -26,10 +27,12 @@ exports.createDampak = asyncHandler(async (req, res) => {
 
  exports.updateDampak = asyncHandler(async (req, res) => {
     const {title, content} = req.body
+    const image = req.file.path;
     const existDampak = await Dampak.findOne({ _id : req.params.id})
     if(existDampak){
         existDampak.title = title;
-        existDampak.content = content
+        existDampak.content = content;
+        existDampak.image = image;
         const updatedDampak = await existDampak.save();
         res.status(200).json({
             success: true,

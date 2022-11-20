@@ -12,6 +12,9 @@ const dampakSchema = mongoose.Schema({
     tanggal: {
         type: Date,
         default: Date.now,
+    },
+    image: {
+        type:String
     }
 })
 

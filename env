@@ -1,6 +1,6 @@
 PORT = 5000
 MODE = "development"
-MONGO_URI = "mongodb://localhost:27017/voluntegreen"
+MONGO_URI = "mongodb+srv://todo:amaliza01@cluster0.5fs6yep.mongodb.net/?retryWrites=true&w=majority"
 
 
 

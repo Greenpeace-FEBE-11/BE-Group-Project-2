@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-/*
+
 const connectDB = async() => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI, {
@@ -14,10 +14,11 @@ const connectDB = async() => {
     }
 }
 module.exports = connectDB
-*/
 
 
-const url = "mongodb://localhost:27017/voluntegreen"
+/*
+//const url = "mongodb://localhost:27017/voluntegreen"
+const url = "mongodb+srv://todo:<password>@cluster0.5fs6yep.mongodb.net/?retryWrites=true&w=majority"
 const db=mongoose.connect(url, {            
     useUnifiedTopology: true,
     useNewUrlParser: true})
@@ -26,3 +27,4 @@ db.then(()=>{
 } ).catch ((error)=>{console.log(error)}) 
     
 module.exports = db
+*/
