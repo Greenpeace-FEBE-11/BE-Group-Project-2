@@ -1,12 +1,16 @@
 {
-  "name": "node-js-jwt-auth-mongodb",
+  "name": "be-group-project-2",
   "version": "1.0.0",
-  "description": "Node.js + MongoDB: JWT Authentication & Authorization",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Greenpeace-FEBE-11/BE-Group-Project-2.git"
   },
   "keywords": [
     "node.js",
@@ -19,8 +23,12 @@
     "mongodb",
     "mongoose"
   ],
-  "author": "bezkoder",
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Greenpeace-FEBE-11/BE-Group-Project-2/issues"
+  },
+  "homepage": "https://github.com/Greenpeace-FEBE-11/BE-Group-Project-2#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-session": "^1.4.0",
