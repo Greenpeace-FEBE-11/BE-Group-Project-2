@@ -26,7 +26,7 @@ const fileFilter= (req, file, cb) => {
 
 const db = require('./config/db');
 dotenv.config({ path: './env'})
-db()
+//db()
 
 const app = express();
 app.use(express.json())
