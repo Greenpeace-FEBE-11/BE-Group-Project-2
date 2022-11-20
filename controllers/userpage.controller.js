@@ -1,8 +1,7 @@
 const userPage = require('../models/userpage')
 
 
-module.exports = {
-    getInformasi: async (req, res) =>{
+exports.getInformasi= async (req, res) =>{
         try {
             const userGetInformasi = await userPage.find()
 
@@ -15,10 +14,9 @@ module.exports = {
         }
     },
 
-    addInformasi:  (req, res) =>{
+    exports.addInformasi =  (req, res) =>{
         const data = req.body
         const userInformasi = new userPage(data)
-        const images = req.file.path
         userInformasi.save()
        
 
@@ -27,10 +25,6 @@ module.exports = {
             data: userInformasi
         })
         
-    },
+    }
 
 
-    updateInformasi: (req, res) =>{
-        
-    },
-}
