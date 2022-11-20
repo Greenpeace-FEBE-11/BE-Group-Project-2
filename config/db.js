@@ -18,7 +18,7 @@ module.exports = connectDB
 
 
 //const url = "mongodb://localhost:27017/voluntegreen"
-const url = "mongodb+srv://todo:<password>@cluster0.5fs6yep.mongodb.net/?retryWrites=true&w=majority"
+const url = "mongodb://localhost:27017/voluntegreen"
 const db=mongoose.connect(url, {            
     useUnifiedTopology: true,
     useNewUrlParser: true})
