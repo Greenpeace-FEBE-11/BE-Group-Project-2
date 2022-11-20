@@ -45,6 +45,11 @@ app.use(cors(corsOptions));
 // parse requests of content-type - application/json
 app.use(express.json());
 app.use(multer({storage: fileStorage, fileFilter: fileFilter}).single('image'))
+
+
+if(process.env.MODE === 'development'){
+    app.use(morgan('dev'))
+}
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
