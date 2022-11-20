@@ -29,10 +29,10 @@ module.exports = function(app) {
     app.get("/userpage", [authJwt.verifyToken], controller.getInformasi)
     app.post("/userpage", [authJwt.verifyToken], controller.addInformasi)
 
-    app.post('/', [authJwt.verifyToken], controller.createDampak)
+    app.post('/', [authJwt.verifyToken, authJwt.isAdmin], controller.createDampak)
 
-    app.put('/:id', [authJwt.verifyToken], controller.updateDampak)
-    app.delete('/:id'[authJwt.verifyToken], controller.deleteDampak)
+    app.put('/:id', [authJwt.verifyToken, authJwt.isAdmin], controller.updateDampak)
+    app.delete('/:id'[authJwt.verifyToken,authJwt.isAdmin], controller.deleteDampak)
     app.get('/:id', [authJwt.verifyToken], controller.getSingleDampak)
     app.get('/', [authJwt.verifyToken], controller.getAllDampaks)
   
