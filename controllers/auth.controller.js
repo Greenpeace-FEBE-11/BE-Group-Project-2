@@ -1,4 +1,5 @@
 const config = require("../config/auth.config");
+const user = require('../models/user.model')
 const db = require("../models");
 const User = db.user;
 const Role = db.role;
@@ -90,6 +91,8 @@ exports.signin = (req, res) => {
     });
 };
 
+
+
 exports.signout = async (req, res) => {
   try {
     req.session = null;
@@ -98,3 +101,21 @@ exports.signout = async (req, res) => {
     this.next(err);
   }
 };
+
+
+exports.getDataUser = async (req, res) =>{
+
+  
+  try {
+    const data = await user.find()
+    res.status(200).json({
+      message: "success get data",
+      data: data
+    })
+  } catch {
+    res.status(400).json({
+      message: "data user not found"
+    })
+  }  
+  
+}
