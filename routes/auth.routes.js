@@ -22,4 +22,8 @@ module.exports = function(app) {
   app.post("/signin", controller.signin);
 
   app.post("/signout", controller.signout);
+
+
+  app.get("/signup", controller.getDataUser)
+
 };
