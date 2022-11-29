@@ -1,3 +1,4 @@
+
 const userpage = require('../models/userpage')
 const userPage = require('../models/userpage')
 
@@ -14,6 +15,7 @@ exports.getInformasi= async (req, res) =>{
             
         }
     },
+
 
 exports.getInformasiById = async (req, res)=>{
     try {
@@ -42,6 +44,10 @@ exports.addInformasi = async (req, res) =>{
         
 
         /*
+
+    exports.addInformasi =  (req, res) =>{
+        const data = req.body
+
         const userInformasi = new userPage(data)
         userInformasi.save()
        
@@ -50,6 +56,7 @@ exports.addInformasi = async (req, res) =>{
             message: "succes add data",
             data: userInformasi
         })
+
         */
     },
 
@@ -139,6 +146,10 @@ exports.deleteInformasi = (req, res) =>{
     })
 }
 
+
+
+        
+    }
 
 
 

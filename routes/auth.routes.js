@@ -23,5 +23,7 @@ module.exports = function(app) {
 
   app.post("/signout", controller.signout);
 
+
   app.get("/signup", controller.getDataUser)
+
 };

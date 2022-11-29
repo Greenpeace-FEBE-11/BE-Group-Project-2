@@ -18,6 +18,8 @@ module.exports = function(app) {
     app.post("/userpage", [authJwt.verifyToken], controller.addInformasi)
     app.put("/userpage/:id", [authJwt.verifyToken], controller.updateInformasi)
     app.delete("/userpage/:id", [authJwt.verifyToken], controller.deleteInformasi)
+   
+
   
   
     

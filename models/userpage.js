@@ -18,6 +18,7 @@ const {Schema} = mongoose
 
         },
       
+
         image: {
             type: String,
             
@@ -31,6 +32,13 @@ const {Schema} = mongoose
             type: Date,
             default: Date.now()
         },
+
+        
+        createdAt: {
+            type: Date,
+            default: Date.now()
+        }
+
     })
 
 

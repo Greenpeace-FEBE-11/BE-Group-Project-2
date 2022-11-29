@@ -92,7 +92,6 @@ exports.signin = (req, res) => {
 };
 
 
-
 exports.signout = async (req, res) => {
   try {
     req.session = null;
@@ -101,6 +100,7 @@ exports.signout = async (req, res) => {
     this.next(err);
   }
 };
+
 
 
 exports.getDataUser = async (req, res) =>{
@@ -119,3 +119,4 @@ exports.getDataUser = async (req, res) =>{
   }  
   
 }
+
