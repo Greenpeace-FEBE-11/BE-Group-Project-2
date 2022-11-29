@@ -59,10 +59,11 @@ const db = require("./models");
 const Role = db.role;
 
 db.mongoose
-  .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+  .connect(`${dbConfig}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
+
   .then(() => {
     console.log("Successfully connect to MongoDB.");
     initial();
@@ -102,15 +103,7 @@ function initial() {
         console.log("added 'user' to roles collection");
       });
 
-      new Role({
-        name: "moderator"
-      }).save(err => {
-        if (err) {
-          console.log("error", err);
-        }
-
-        console.log("added 'moderator' to roles collection");
-      });
+     
 
       new Role({
         name: "admin"

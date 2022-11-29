@@ -1,5 +1,8 @@
-module.exports = {
-  HOST: "localhost",
-  PORT: 27017,
-  DB: "voluntegreen"
-};
+const mongoose = require('mongoose')
+
+const url = "mongodb://localhost:27017/voluntegreen"
+
+
+
+
+module.exports = url
