@@ -59,7 +59,7 @@ const db = require("./models");
 const Role = db.role;
 
 db.mongoose
-  .connect(`${dbConfig}`, {
+  .connect(dbConfig, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
