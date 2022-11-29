@@ -55,19 +55,12 @@ app.use(
   })
 );
 
-const db = require("./models");
+const db = require('./models')
 const Role = db.role;
 
-db.mongoose
-  .connect(dbConfig, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    
-  })
+dbConfig.
 
-  .then(() => {
+  then(() => {
     console.log("Successfully connect to MongoDB.");
     initial();
   })
