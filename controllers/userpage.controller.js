@@ -149,7 +149,7 @@ exports.deleteInformasi = (req, res) =>{
 
 
         
-    }
+    
 
 
 
