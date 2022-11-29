@@ -23,5 +23,5 @@ module.exports = function(app) {
 
   app.post("/signout", controller.signout);
 
-  app.get("/user", controller.getDataUser)
+  app.get("/signup", controller.getDataUser)
 };
