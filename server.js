@@ -61,7 +61,10 @@ const Role = db.role;
 db.mongoose
   .connect(dbConfig, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    
   })
 
   .then(() => {
