@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const url = "mongodb://localhost:27017/voluntegreen"
+const url = "mongodb+srv://GLynn:feixin@cluster0.2uezytu.mongodb.net/voluntegreen"
 
 async function connect(){
       try {
