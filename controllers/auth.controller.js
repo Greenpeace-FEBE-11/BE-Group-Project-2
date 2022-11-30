@@ -118,5 +118,61 @@ exports.getDataUser = async (req, res) =>{
     })
   }  
   
+},
+
+exports.getDataUserById = async (req, res) =>{
+  try {
+
+    const data = await user.findOne({_id: req.params.id})
+    res.status(200).json({
+      message: "get user detail successfuly",
+      data: data
+    })
+  } catch {
+    
+    res.status(400).json({
+      message: "user not found"
+    })
+  }
+},
+
+exports.deletUserById = async (req, res) =>{
+
+  try {
+    await user.deleteOne({_id: req.params.id})
+    res.status(200).json({
+      message: "delete successfuly"
+
+    })
+
+  } catch {
+    
+    res.status(400).json({
+      message: "delete user failed"
+    })
+  }
+},
+
+
+exports.updateUserById = async (req, res) =>{
+  const {username, email, password} = req.body
+  const updateUser = await user.findOneAndUpdate({_id: req.params.id})
+  if(updateUser){
+    updateUser.username = username;
+    updateUser.email = email
+    updateUser.password = password
+    
+
+    const updated = await updateUser.save()
+    res.status(200).json({
+      message: "update user successfuly",
+      data: updated
+    })
+  }else {
+    res.status(400).json({
+      message: "user not found"
+    })
+  }
+
 }
 
