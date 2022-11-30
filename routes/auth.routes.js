@@ -24,7 +24,11 @@ module.exports = function(app) {
   app.post("/signout", controller.signout);
 
 
-  app.get("/signup", controller.getDataUser)
+ 
+  app.get("/users", controller.getDataUser)
+  app.get("/users/:id",  controller.getDataUserById)
+  app.delete("/users/:id",  controller.deletUserById)
+  app.put("/users/:id",  controller.updateUserById)
 
   app.get("/admin", controller.getDataUser)
   app.get("/admin/:id", authJwt.verifyToken, authJwt.isAdmin, controller.getDataUserById)
